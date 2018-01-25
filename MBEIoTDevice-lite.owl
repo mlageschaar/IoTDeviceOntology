@@ -490,10 +490,6 @@
     <owl:ObjectProperty rdf:about="http://purl.org/co/element">
         <owl:inverseOf rdf:resource="http://purl.org/co/elementOf"/>
         <rdfs:domain rdf:resource="http://purl.org/co/Collection"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#CommandList"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#StateSet"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#Command"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#State"/>
         <rdfs:comment xml:lang="en">The link to the members of a collection</rdfs:comment>
         <rdfs:label xml:lang="en">has element</rdfs:label>
     </owl:ObjectProperty>
@@ -503,8 +499,6 @@
     <!-- http://purl.org/co/elementOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/co/elementOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#State"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#StateSet"/>
         <rdfs:comment xml:lang="en">The link to a collection in which the object is member.</rdfs:comment>
         <rdfs:label xml:lang="en">is element of</rdfs:label>
     </owl:ObjectProperty>
@@ -538,9 +532,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/co/item">
         <owl:inverseOf rdf:resource="http://purl.org/co/itemOf"/>
         <rdfs:domain rdf:resource="http://purl.org/co/Bag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#CommandList"/>
         <rdfs:range rdf:resource="http://purl.org/co/Item"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#Command"/>
         <rdfs:comment xml:lang="en">The link to every item of the bag</rdfs:comment>
         <rdfs:label xml:lang="en">has item</rdfs:label>
     </owl:ObjectProperty>
@@ -550,8 +542,6 @@
     <!-- http://purl.org/co/itemOf -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/co/itemOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#Command"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#CommandList"/>
         <rdfs:comment xml:lang="en">The link to a bag in which the item is member.</rdfs:comment>
         <rdfs:label xml:lang="en">is item of</rdfs:label>
     </owl:ObjectProperty>
@@ -6920,6 +6910,7 @@ A Value of a Thing can have meta data</rdfs:comment>
     <!-- http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#Command -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mark/ontologies/2018/0/MBEIoTDevice-lite#Command">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/Item"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/co/itemOf"/>
